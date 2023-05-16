@@ -34,6 +34,8 @@ export class BuildService {
         session.list_graph_node.forEach((e: GraphNode) => {
             e.connexion = {}
         })
+
+        session.first_graph_node.connexion = {}
     }
 
     calcAllDistance(session: Graph){
@@ -67,6 +69,8 @@ export class BuildService {
 
         let visited_id = [add.id]
         let visited = [add]
+
+        console.log(add)
 
         while(true){
 
@@ -117,6 +121,9 @@ export class BuildService {
 
             this.initConnexionObject(session)
             this.calcAllDistance(session)
+
+            console.log('-------------')
+            console.log(session)
             this.createOrderedGraph(session)
             
             message.info = "build correctly made"
