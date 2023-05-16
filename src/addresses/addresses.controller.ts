@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Get, Delete } from '@nestjs/common';
+import { Body, Controller, Post, Get, Delete, Query } from '@nestjs/common';
 import { AddressesService } from './addresses.service';
 import { AddressPostDTO } from './dto/addressPost.dto';
 import { AddressDeleteGetDTO } from './dto/addressDeleteGet.dto';
@@ -16,17 +16,15 @@ export class AddressesController {
 
         const node: GraphNode = {
             id : uuidv4(),
-            label : body.label,
-            lon : body.lon,
-            lat : body.lat
+            ...body
         }
         
         return this.addressesService.addAddress(body.session_token, node)
     }
 
     @Get()
-    getAddress(@Body() body : AddressDeleteGetDTO){
-        return this.addressesService.getAddress(body.session_token, body.address_id)
+    getAddress(@Query() param : AddressDeleteGetDTO){
+        return this.addressesService.getAddress(param.session_token, param.address_id)
     }
 
     @Delete()
@@ -41,8 +39,8 @@ export class AddressesController {
     }
 
     @Get("/first-address")
-    getFirstAddress(@Body() body : SessionTokenDTO){
-        return this.addressesService.getFirstAddress(body.session_token)
+    getFirstAddress(@Query() param : SessionTokenDTO){
+        return this.addressesService.getFirstAddress(param.session_token)
     }
 
     @Delete("/first-address")

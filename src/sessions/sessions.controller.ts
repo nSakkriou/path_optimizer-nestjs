@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Param, Delete, Body } from '@nestjs/common';
+import { Controller, Get, Post, Query, Delete, Body } from '@nestjs/common';
 import { SessionsService } from './sessions.service';
 import { SessionTokenDTO } from './dto/session_token.dto';
 
@@ -8,8 +8,8 @@ export class SessionsController {
     constructor(private readonly sessionService: SessionsService){}
 
     @Get()
-    getSession(@Body() body : SessionTokenDTO){
-        return this.sessionService.getSession(body.session_token)
+    getSession(@Query() param : SessionTokenDTO){
+        return this.sessionService.getSession(param.session_token)
     }
 
     @Post()
