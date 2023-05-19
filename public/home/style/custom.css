@@ -1,0 +1,118 @@
+:root {
+    --r-background-color: #fdf6e3;
+    --r-main-font: Lato, sans-serif;
+    --r-main-font-size: 40px;
+    --r-main-color: #657b83;
+    --r-block-margin: 20px;
+    --r-heading-margin: 0 0 20px 0;
+    --r-heading-font: League Gothic, Impact, sans-serif;
+    --r-heading-color: #586e75;
+    --r-heading-line-height: 1.2;
+    --r-heading-letter-spacing: normal;
+    --r-heading-text-transform: uppercase;
+    --r-heading-text-shadow: none;
+    --r-heading-font-weight: normal;
+    --r-heading1-text-shadow: none;
+    --r-heading1-size: 3.77em;
+    --r-heading2-size: 2.11em;
+    --r-heading3-size: 1.55em;
+    --r-heading4-size: 1em;
+    --r-code-font: monospace;
+    --r-link-color: #268bd2;
+    --r-link-color-dark: #1a6091;
+    --r-link-color-hover: #78b9e6;
+    --r-selection-background-color: #d33682;
+    --r-selection-color: #fff;
+
+    --r-dark-main-color: #53646b;
+
+}
+
+/* ------- CUSTOM CSS -------- */
+
+.reveal #first{
+    text-align: left;
+}
+
+.reveal .small-p{
+    font-size: 0.50em;
+}
+
+.reveal #contact{
+    text-align: right;
+}
+
+.fa, .small-p, .sub-paragraph, .letter-title {
+    transition: 0.3s ease-in-out;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.fa:hover{
+    color: var(--r-link-color-hover);
+}
+
+.tag-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 64px;
+}
+
+.reveal .link {
+    color: var(--r-main-color);
+    transition: 0.3s ease-in-out;
+}
+
+.reveal #copyright{
+    font-size: 12px;
+    padding-top: 15vh;
+}
+
+.reveal .tag{
+    background-color: var(--r-main-color);
+    color: var(--r-background-color);
+    border-radius: 500px;
+    padding: 0.75em;
+    transition: 0.3s ease-in-out;
+}
+
+.reveal .tag:hover{
+    background-color: var(--r-link-color);
+}
+
+
+.reveal #skills-list{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reveal .skill-panel{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    gap: 32px;
+}
+
+.skill-logo {
+    transition: 0.3s ease-in-out;
+}
+
+.skill-logo:hover, .small-p:hover, .sub-paragraph:hover, .letter-title:hover{
+    color: var(--r-link-color-hover);
+}
+
+.col {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.nestjs {
+    background-image: url(../assets/nestjs.svg);
+    width: 100px;
+    height: 100px;
+}

@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Render } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -6,7 +6,18 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  docs(){
-    return this.appService.doc_info()
+  @Render("home/index")
+  home(){
   }
+
+  @Get("/adeona")
+  @Render("adeona/index")
+  adeona(){
+  }
+  
+  @Get("/documentation")
+  @Render("documentation/index")
+  docs(){
+  }
+
 }

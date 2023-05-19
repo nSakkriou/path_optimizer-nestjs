@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="leaflet-search/dist/leaflet-search.mobile.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+   <title>Find Address</title>
+</head>
+<body>
+
+    <main>
+        <div id="markers">
+            <div id="search-wrapper">
+                
+                <div id="search">
+                    <input type="text" placeholder="Entrez votre addresse" id="search-input">
+                    <input type="button" value="Recherche" id="btn-search">    
+                </div>
+
+                <div id="result">
+                    
+                </div>
+            </div>
+
+            <div id="title-markers">
+                <h2>Listes des destinations</h2>
+            </div>
+    
+            <div id="markers-wrapper">
+                
+                <ul id="markers-list">
+
+                </ul>
+
+                <div id="build">
+                    <button id="btn-build">Build</button>
+                </div>
+
+            </div>
+        </div>
+        
+        <div id="map"></div>    
+    </main>
+
+    <div id="modal">
+
+        <div id="modal-content">
+            <h1>Voici le plus opti</h1>
+
+            <ol id="modal-ol">
+    
+            </ol>
+
+            <button id="modal-close-btn">Fermer</button>
+        </div>
+    </div>
+
+    <script src="leaflet/dist/leaflet-src.js"></script>
+    <script src="leaflet-search/dist/leaflet-search.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
